@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tm_main">
+        <div class="tm_tracking_info" style="display: none;"></div>
+        <div class="tm_tracking_content"></div>
+        </div>
+        <script>// <![CDATA[
+        var script_new = document.createElement('script');
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var day = date.getDate()+1;
+            script_new.src = '//admin.trackingmore.net/static/js/tm_loadFrame.js?time='+year+''+month+''+(day%7);
+            document.querySelector('.tm_main').parentNode.insertBefore(script_new,document.querySelector('.tm_main').nextSibling);
+        // ]]></script>
+</body>
+</html>
